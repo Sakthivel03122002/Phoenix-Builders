@@ -1,0 +1,233 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #ccc;
+}
+
+/* NAVBAR */
+.custom-nav {
+  background: linear-gradient(90deg, rgba(0,0,0,0.95), rgba(20,20,20,0.9));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+.custom-nav:hover {
+  box-shadow: 0 6px 30px rgba(212, 175, 55, 0.2);
+}
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+.nav-link {
+  position: relative;
+  color: #ccc !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  margin: 0 10px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37, #c0392b);
+  transition: width 0.4s ease;
+}
+.nav-link:hover {
+  color: #d4af37 !important;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav-link.active {
+  color: #d4af37 !important;
+}
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero-section {
+  height: 100vh;
+  background: url('../images/hero-bg.jpg') center/contain no-repeat;
+  position: relative;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+}
+.hero-logo-bg {
+  position: absolute;
+  width: 900px;
+  opacity: 0.10;
+  left: 20%;
+  top: 20%;
+}
+.hero-content {
+  position: relative;
+  top: 35%;
+}
+.hero-content h1 {
+  color: #d4af37;
+  font-size: 64px;
+  font-weight: 900;
+}
+.hero-content p {
+  font-size: 24px;
+}
+
+/* BUTTON */
+.btn-gold {
+  background: linear-gradient(45deg,#d4af37,#c0392b);
+  border: none;
+  color: #000;
+  font-weight: 700;
+  padding: 12px 30px;
+}
+
+/* ABOUT */
+.about-section {
+  padding: 100px 0;
+  background: #0b0b0b;
+}
+.about-gold-box {
+  background: linear-gradient(45deg,#d4af37,#c0392b);
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  color: #000;
+  font-weight: 700;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+}
+
+/* SERVICES */
+.section-black {
+  padding: 100px 0;
+}
+.service-card {
+  background: #111;
+  padding: 40px;
+  text-align: center;
+  border: 1px solid #d4af37;
+  transition: 0.4s;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  background: #d4af37;
+  color: #000;
+}
+
+/* PROJECTS */
+.projects-section {
+  padding: 100px 0;
+  background: #0b0b0b;
+}
+
+/* CONTACT */
+.contact-section {
+  padding: 80px 0;
+  background: linear-gradient(45deg,#000,#111);
+}
+.contact-box {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
+}
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 15px 0;
+}
+.contact-icon {
+  font-size: 32px;
+  min-width: 50px;
+  text-align: center;
+}
+.contact-content h6 {
+  color: #d4af37;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.contact-content a,
+.contact-content p {
+  color: #ccc;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.contact-content a {
+  color: #d4af37;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.contact-content a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  margin: 15px 0;
+}
+.director-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
+  transition: 0.4s;
+}
+.director-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.25);
+}
+.director-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #d4af37;
+  display: block;
+  margin: 0 auto;
+}
+.director-card h5 {
+  color: #d4af37;
+  font-weight: 700;
+  font-size: 18px;
+}
+.director-title {
+  color: #ccc;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 5px 0 0 0;
+}
+
+/* FOOTER */
+.footer {
+  background: #000;
+  padding: 20px;
+  color: #777;
+}
